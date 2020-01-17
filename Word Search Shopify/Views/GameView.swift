@@ -53,7 +53,7 @@ class GameView: AYUIView {
             .addLeft()
             .addRight()
             .addBottom()
-            .addHeight(withConstant: UIScreen.main.bounds.height).setColor(UIColor(hex: 0xF5E3AD))
+            .addHeight(withConstant: UIScreen.main.bounds.height).setColor(UIColor(hex: 0xF5E3AD)).done()
         
         //scoreLabel constraint and subview setup
         scoreLabel.setSuperview(self)

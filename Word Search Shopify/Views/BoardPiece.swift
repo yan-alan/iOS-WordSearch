@@ -18,6 +18,7 @@ class BoardPiece: AYUIView {
         let label = UILabel()
         label.setFont(name: "Futura-Bold", size: 20).textColor = .black
         label.textAlignment = .center
+        label.textColor = .black
         return label
     }()
     /// the back colour view
@@ -38,7 +39,7 @@ class BoardPiece: AYUIView {
         colourView.widthAnchor.constraint(equalTo: text.widthAnchor, constant: 5).isActive = true
         colourView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         colourView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        colourView.addCorners(5).setColor(UIColor(hex: 0xF8F2E1))
+        colourView.addCorners(5).setColor(UIColor(hex: 0xF8F2E1)).done()
     }
 }
 
@@ -53,6 +54,7 @@ class BiggerBoardPiece: AYUIView {
         let label = UILabel()
         label.setFont(name: "Futura-Bold", size: 25).textColor = .black
         label.textAlignment = .center
+        label.textColor = .black
         return label
     }()
     /// the back colour view
@@ -73,6 +75,6 @@ class BiggerBoardPiece: AYUIView {
         colourView.widthAnchor.constraint(equalTo: text.widthAnchor, constant: 5).isActive = true
         colourView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         colourView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        colourView.addCorners(5).setColor(UIColor(hex: 0xF8F2E1))
+        colourView.addCorners(5).setColor(UIColor(hex: 0xF8F2E1)).done()
     }
 }

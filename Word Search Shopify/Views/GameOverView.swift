@@ -14,6 +14,7 @@ class GameOverView: AYUIView {
     lazy var title: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.textColor = .black
         label.setFont(name: "Futura-Bold", size: 28).done()
         label.text = "Game Over"
         return label
@@ -22,6 +23,7 @@ class GameOverView: AYUIView {
     lazy var tableTitle: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.textColor = .black
         label.setFont(name: "Futura-Bold", size: 20).done()
         label.text = "High Scores:"
         return label
@@ -59,6 +61,6 @@ class GameOverView: AYUIView {
             .addTop(anchor: tableTitle.bottomAnchor, constant: 10)
             .addRight(constant: -50)
             .addLeft(constant: 50)
-            .addBottom(anchor: restartButton.topAnchor, constant: -20).setColor(.clear)
+            .addBottom(anchor: restartButton.topAnchor, constant: -20).setColor(.clear).done()
     }
 }

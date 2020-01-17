@@ -13,6 +13,7 @@ class StartScreenView: AYUIView {
     lazy var buttonList: [BiggerBoardPiece] = []
     lazy var title: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .center
         label.setFont(name: "Futura-Bold", size: 32).done()
         label.text = "iOS Word Search"
@@ -20,6 +21,7 @@ class StartScreenView: AYUIView {
     }()
     lazy var subTitle: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .center
         label.setFont(name: "Futura", size: 22).done()
         label.text = "Alan Yan"
@@ -28,6 +30,7 @@ class StartScreenView: AYUIView {
     lazy var startStack = UIStackView()
     lazy var wordsLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         label.setFont(name: "Futura", size: 18).done()
         label.text = "Current Words (Tap To Remove): "
@@ -35,6 +38,7 @@ class StartScreenView: AYUIView {
     }()
     lazy var introParagraph: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         label.setFont(name: "Futura", size: 16).done()
         label.numberOfLines = 0
@@ -58,7 +62,7 @@ class StartScreenView: AYUIView {
     lazy var shadowBottomView = ShadowUIView(radius: 2, subLayer: bottomView)
     lazy var searchBar: UITextField = {
         let textField = UITextField()
-
+        textField.textColor = .black
         textField.placeholder = "add a word..."
         textField.text = ""
         textField.autocorrectionType = .no
@@ -89,7 +93,7 @@ class StartScreenView: AYUIView {
         startStack.setSuperview(self)
             .addTop(anchor: subTitle.bottomAnchor, constant: 15)
             .addHeight(withConstant: 40)
-            .addWidth(withConstant: 195).setColor(.clear)
+            .addWidth(withConstant: 195).setColor(.clear).done()
         startStack.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
         setupStack()
         //Into Paragraph Constraints
@@ -106,10 +110,10 @@ class StartScreenView: AYUIView {
             .addLeft(constant: 30)
             .addRight(constant: -30)
             .addBottom()
-            .addTop(anchor: wordsLabel.bottomAnchor, constant: 15).setColor(.clear)
+            .addTop(anchor: wordsLabel.bottomAnchor, constant: 15).setColor(.clear).done()
         
         //Add Bar Setup
-        bottomView.setColor(.white)
+        bottomView.setColor(.white).done()
         bottomView.clipsToBounds = true
         bottomView.layer.cornerRadius = 25
         bottomView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -144,14 +148,16 @@ class StartScreenView: AYUIView {
             .addLeft(anchor: searchView.leftAnchor, constant: 20)
             .addWidth(withConstant: 100)
             .centerYAnchor.constraint(equalTo: searchView.topAnchor).isActive = true
+        addWordLabel.textColor = .black
         addWordLabel.textAlignment = .center
         addWordLabel.backgroundColor = .white
         addWordLabel.text = "Add Word"
         
         // Error Label Setup
-        errorLabel.setSuperview(self).addLeft(anchor: searchView.leftAnchor, constant: 20).addWidth(withConstant: 160).addBottom(anchor: searchView.topAnchor, constant: -10).addHeight(withConstant: 0).addCorners(7).setColor(UIColor(hex: 0xDC4545))
+        errorLabel.setSuperview(self).addLeft(anchor: searchView.leftAnchor, constant: 20).addWidth(withConstant: 160).addBottom(anchor: searchView.topAnchor, constant: -10).addHeight(withConstant: 0).addCorners(7).setColor(UIColor(hex: 0xDC4545)).done()
         errorLabel.textAlignment = .center
         errorLabel.text = "At Max Words"
+        errorLabel.textColor = .black
         
         // Too Long Label Setup
         tooLongLabel.setSuperview(self)
@@ -159,9 +165,11 @@ class StartScreenView: AYUIView {
             .addWidth(withConstant: 160)
             .addBottom(anchor: searchView.topAnchor, constant: -10)
             .addHeight(withConstant: 0)
-            .addCorners(7).setColor(UIColor(hex: 0xDC4545))
+            .addCorners(7).setColor(UIColor(hex: 0xDC4545)).done()
         tooLongLabel.textAlignment = .center
         tooLongLabel.text = "Max 10 Characters"
+        tooLongLabel.textColor = .black
+
         
         // Search Bar Setup
         searchBar.setSuperview(self)

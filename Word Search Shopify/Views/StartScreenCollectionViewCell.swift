@@ -12,6 +12,7 @@ import AlanYanHelpers
 class StartScreenCollectionViewCell: UICollectionViewCell {
     lazy var text: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .center
         label.setFont(name: "Futura-Bold", size: 17).done()
         return label
@@ -29,7 +30,7 @@ class StartScreenCollectionViewCell: UICollectionViewCell {
     }
     
     func setupView() {
-        addCorners(8).setColor(UIColor(hex: 0xF5E3AD))
+        addCorners(8).setColor(UIColor(hex: 0xF5E3AD)).done()
         
         //text on the collection view
         text.setSuperview(self)

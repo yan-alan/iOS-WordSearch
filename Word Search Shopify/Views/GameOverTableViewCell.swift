@@ -30,7 +30,8 @@ class GameOverTableViewCell: UITableViewCell {
 
         nameLabel.setFont(name: "Futura", size: 18).done()
         scoreLabel.setFont(name: "Futura", size: 18).done()
-
+        nameLabel.textColor = .black
+        scoreLabel.textColor = .black
         nameLabel.textAlignment = .left
         scoreLabel.textAlignment = .right
     }
